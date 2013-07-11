@@ -90,8 +90,7 @@ public class GitRepoAPI extends HttpServlet implements PluginIdAware {
 
                             LOG.debug("going to create authentication");
                             AuthenticationData authentication = new AuthenticationData();
-                            authentication.setPrivateKey(pkey);
-                            authentication.setAuthenticationStyle(AuthenticationStyle.SSH_KEY_WITHOUT_PASSPHRASE);
+                            authentication.setAuthenticationStyle(AuthenticationStyle.NONE);
                             repoData.setAuthentication(authentication);
 
                             LOG.info("Creating repo " + repositoryName);
